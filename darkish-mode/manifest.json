@@ -3,13 +3,10 @@
     "version": "1.0",
     "description": "Change background color.",
     "permissions": ["storage"],
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
     "content_scripts": [
         {
-            "matches": ["*.force.com*"]
+            "matches": ["*://*.chrome.com/*"],
+            "css": ["style.css"]
         }
     ],
     "icons": {
